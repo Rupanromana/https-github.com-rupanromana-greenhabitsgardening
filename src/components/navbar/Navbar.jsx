@@ -6,21 +6,49 @@ import {ImCross} from 'react-icons/im'
 
 
 function Navbar() {
-  const [click, setclick] = useState(false)
+  const [click, setClick] = useState(false);
 
-  const handleOnClick = () => setclick(!click)
+  const handleClick = () => setClick(!click);
+  const closeMobileMenu = () => setClick(false);
 
   return (
-    <nav>
+    <>
+      <nav className='navbar'>
         <div className='navbar-container'>
-          <Link to="/">GREEN HABITS GARDENING CO.</Link>
-          
-        <div className='menu-icon' onClick={handleOnClick}>
+          <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
+            GREEN HABITS GARDENING INC.
+          </Link>
+          <div className='menu-icon' onClick={handleClick}>
             {click?<ImCross/>:<GiHamburgerMenu/>}
-
+          </div>
+          <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+            <li className='nav-item'>
+              <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+                HOME
+              </Link>
+            </li>
+            <li className='nav-item'>
+              <Link
+                to='/'
+                className='nav-links'
+                onClick={closeMobileMenu}
+              >
+                WORKS
+              </Link>
+            </li>
+            <li className='nav-item'>
+              <Link
+                to='/'
+                className='nav-links'
+                onClick={closeMobileMenu}
+              >
+                CONTACT
+              </Link>
+            </li>
+          </ul>
         </div>
-        </div>
-    </nav>
+      </nav>
+    </>
   )
 }
 
