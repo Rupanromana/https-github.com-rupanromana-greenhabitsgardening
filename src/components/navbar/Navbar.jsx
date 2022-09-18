@@ -4,7 +4,6 @@ import './navbar.scss'
 import { GiHamburgerMenu } from 'react-icons/gi';
 import {ImCross} from 'react-icons/im'
 
-
 function Navbar() {
   const [click, setClick] = useState(false);
 
@@ -16,8 +15,9 @@ function Navbar() {
       <nav className='navbar'>
         <div className='navbar-container'>
           <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-            GREEN HABITS GARDENING INC.
+          L  
           </Link>
+          <div>GREEN HABBIT GARGENING</div>
           <div className='menu-icon' onClick={handleClick}>
             {click?<ImCross/>:<GiHamburgerMenu/>}
           </div>
