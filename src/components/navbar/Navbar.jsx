@@ -17,7 +17,7 @@ function Navbar() {
           <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
           L  
           </Link>
-          <div>GREEN HABBIT GARGENING</div>
+          <div>GREEN HABIT GARGENING</div>
           <div className='menu-icon' onClick={handleClick}>
             {click?<ImCross/>:<GiHamburgerMenu/>}
           </div>

@@ -1,10 +1,12 @@
 .navbar {
     background: forestgreen;
     height: 80px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
+    font-family: "Snell Roundhand, cursive";
     position: sticky;
     top: 0;
     z-index: 999;

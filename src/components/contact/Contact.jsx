@@ -1,8 +1,5 @@
 import "./contact.scss"
-import {motion} from 'framer-motion'
 import emailjs from "emailjs-com"
-
-
 
 export default function Contact() {
 
@@ -19,23 +16,26 @@ export default function Contact() {
     }
     
     return (
-    <div className="contact-container">
-        <h1>CONTACT US</h1><br/>
-            <form onSubmit={sendEmail}>
-                <div className="name">Name</div>
-                    <input type="text" name="name" />
-                    <div className="email">Email</div>
-                    <input type="email" name="email" />
-                    <div className="subject">Subject</div>
-                    <input type="text" name="subject" />
-                    <div className="message">Message</div>
-                    <textarea className="textarea" name="message" placeholder="A message for me ?" ></textarea>
-                     <br/>
-                    <div className="row"><input  type="submit" value="send" name="message"/></div>
+        <div className="contact" id="contact">
+        <div className="contact-container">
+                <h2 className="title">CONTACT US</h2>
+            <div className="left">
+                <form onSubmit={sendEmail}>
+                    <div className="name-input">Name
+                    <input type="text" name="name" /></div>
+                    <div className="email-input">Email
+                    <input type="email" name="email" /></div>
+                    <div className="subject-input">Subject
+                    <input type="text" name="subject" /></div>
+                    <div className="message-input">Message</div>
+                    <textarea className="textarea-input" name="message" placeholder="A message for me ?" ></textarea>
+                    <br/>
+                    <div className="submit-button"><input  type="submit" value="send" name="message"/>
+                    </div>
                 </form>
+            </div>
         </div>
+
+    </div>
     );
 }
-
-
-
