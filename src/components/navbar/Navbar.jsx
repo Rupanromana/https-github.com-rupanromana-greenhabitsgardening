@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 import {Link} from 'react-router-dom'
 import './navbar.scss'
 import { GiHamburgerMenu } from 'react-icons/gi';
-import {ImCross} from 'react-icons/im'
+import {ImCross, ImTextColor} from 'react-icons/im'
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -15,9 +15,9 @@ function Navbar() {
       <nav className='navbar'>
         <div className='navbar-container'>
           <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-          L  
+          <img style={{ width: 100, height: 100, marginTop:20 }}src={require("./gardenlogo.PNG")} />
           </Link>
-          <div>GREEN HABIT GARGENING</div>
+          
           <div className='menu-icon' onClick={handleClick}>
             {click?<ImCross/>:<GiHamburgerMenu/>}
           </div>

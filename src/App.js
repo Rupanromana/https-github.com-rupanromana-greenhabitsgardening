@@ -4,24 +4,20 @@ import Navbar from './components/navbar/Navbar';
 import Works from './components/works/Works';
 import Contact from './components/contact/Contact';
 import {BrowserRouter as Router,Routes,Route } from 'react-router-dom'
-import ErrorPage from './components/ErrorPage';
+import Card from "./components/card/Card"
 
 function App() {
   return (
   <Router>
-    
-    <Routes>  
-      <Route path='/' element={<Home/>} />
-      <Route path='*' element={<ErrorPage/>} />
-    </Routes>
-
-      <div className='app'>
-        <Navbar/>
-        <Home/>
-        <div className='sections'>
-          <Contact/>  
-        </div>
-      </div>
+  <div className='app'>
+    <Navbar/>
+    <div className='sections'>
+      
+      <Home/>
+      <Works/>
+      <Contact/>  
+    </div>
+  </div>
    
     
   </Router>

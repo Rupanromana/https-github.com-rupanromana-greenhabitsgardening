@@ -1,6 +1,42 @@
 .home{
-    color: forestgreen;
-    background-color: black;
-   
+    color: burlywood;
+    background: url(../../../public/bg_image/garden.avif) no-repeat center center fixed;
+    background-size: cover;
+    opacity: 0.9;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex-start;
+
+    .home_container{
+        align-items: center;
+        justify-content: center;
+        .para{
+            display: flex;
+            // padding-left: 25%;
+            // padding-right: 22%;
+            align-items: center;
+            justify-content: center;
+            color: whitesmoke;
+            box-sizing: border-box;
+            
+        }
+        padding-top: 20px;
+        font-size: 20px;
+        .main{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;            
+        }
+    }
+
+    .card_container
+    {
+        display:flex;
+    }
+    
     
 }
+

@@ -18,17 +18,23 @@ export default function Contact() {
     return (
         <div className="contact" id="contact">
         <div className="contact-container">
-                <h2 className="title">CONTACT US</h2>
+            <h2 className="title">Reach Us Today!</h2>
             <div className="left">
                 <form onSubmit={sendEmail}>
                     <div className="name-input">Name
-                    <input type="text" name="name" /></div>
+                        <input type="text" name="name" />
+                    </div>
                     <div className="email-input">Email
-                    <input type="email" name="email" /></div>
+                        <input type="email" name="email" />
+                    </div>
                     <div className="subject-input">Subject
-                    <input type="text" name="subject" /></div>
-                    <div className="message-input">Message</div>
-                    <textarea className="textarea-input" name="message" placeholder="A message for me ?" ></textarea>
+                        <input type="text" name="subject" />
+                    </div>
+                    <div className="message-input">Message
+                    </div>
+                    <textarea className="textarea-input" name="message" placeholder="Enter your inquiries here." >
+
+                    </textarea>
                     <br/>
                     <div className="submit-button"><input  type="submit" value="send" name="message"/>
                     </div>
@@ -37,5 +43,6 @@ export default function Contact() {
         </div>
 
     </div>
+
     );
 }
