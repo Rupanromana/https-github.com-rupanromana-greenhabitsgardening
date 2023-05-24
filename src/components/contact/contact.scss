@@ -1,0 +1,115 @@
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  background: linear-gradient(360deg,burlywood 5%, white 95%);   
+
+}
+.contact-container {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  border-radius: 10px;
+  background-color: rgba(0,0,0,.05);
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.contact-info {
+  margin-bottom: 30px;
+}
+
+.title {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 16px;
+  text-align: center; /* Update text alignment to center */
+  margin-bottom: 20px;
+}
+
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the form horizontally */
+  justify-content: center; /* Center the form vertically */
+}
+
+form {
+  width: 100%;
+  max-width: 400px; /* Adjust the max-width of the form to your preference */
+}
+
+.name-input,
+.email-input,
+.subject-input,
+.message-input {
+ display: flex;
+ flex-direction: column;
+ margin-bottom: 8px; /* Reduce margin-bottom to make the boxes slightly smaller */
+}
+
+.name-input input[type="text"],
+.email-input input[type="email"],
+.subject-input input[type="text"] {
+ width: 100%; /* Adjust the width to make the inputs narrower */
+}
+textarea {
+ padding: 5px; /* Reduce padding to make the boxes slightly smaller */
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.textarea-input {
+  width: 100%; /* Set the width to 100% to make the textarea span the full width */
+  height: 120px;
+  resize: vertical;
+  max-height: 300px;
+}
+
+.submit-button {
+  text-align: right;
+  margin-top: 10px;
+}
+
+input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+ 
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin: 0 10px; /* Adjust the horizontal spacing between icons */
+  border-radius: 50%;
+  background-color: rgba(0,0,0,.05);
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.social-icons a:hover {
+  background-color: black;
+}

@@ -1,0 +1,19 @@
+.motion_handle
+    {
+        .card
+        {   
+            float: right;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            padding: 3rem 5rem;
+            background-color: rgba(0,0,0,.5);
+            color: burlywood;
+            p{
+                display: flex;
+                padding-top: 1rem;
+
+            }    
+        }
+    
+    }
