@@ -1,10 +1,11 @@
-import React,{useState} from 'react'
-import {Link} from 'react-router-dom'
-import './navbar.scss'
+import React, { useState } from 'react';
+import { Link } from 'react-scroll';
+import './navbar.scss';
 import { GiHamburgerMenu } from 'react-icons/gi';
-import {ImCross, ImTextColor} from 'react-icons/im'
+import { ImCross } from 'react-icons/im';
 
-function Navbar() {
+function Navbar({handleContactClick, handleWorkClick,handleHomeClick}) {
+  
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);
@@ -12,35 +13,64 @@ function Navbar() {
 
   return (
     <>
-      <nav className='navbar'>
-        <div className='navbar-container'>
-          <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-          <img style={{ width: 100, height: 100, marginTop:20 }}src={require("./gardenlogo.PNG")} />
+      <nav className="navbar">
+        <div className="navbar-container">
+          <Link
+            to="home"
+            smooth={true}
+            duration={500}
+            className="navbar-logo"
+            onClick={closeMobileMenu}
+          >
+            <img
+              style={{ width: 100, height: 100, marginTop: 20 }}
+              src={require("./gardenlogo.PNG")}
+              alt="Logo"
+             />
           </Link>
-          
-          <div className='menu-icon' onClick={handleClick}>
-            {click?<ImCross/>:<GiHamburgerMenu/>}
+
+          <div className="menu-icon" onClick={handleClick}>
+            {click ? <ImCross /> : <GiHamburgerMenu />}
           </div>
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-            <li className='nav-item'>
-              <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+          <li className="nav-item">
+              <Link
+                to="home"
+                smooth={true}
+                duration={500}
+                className="nav-links"
+                onClick={() => {
+                  handleHomeClick();
+                  closeMobileMenu();
+                }}
+              >
                 HOME
               </Link>
             </li>
-            <li className='nav-item'>
+            <li className="nav-item">
               <Link
-                to='/'
-                className='nav-links'
-                onClick={closeMobileMenu}
+                to="works"
+                smooth={true}
+                duration={500}
+                className="nav-links"
+                onClick={() => {
+                  handleWorkClick();
+                  closeMobileMenu();
+                }}
               >
                 WORKS
               </Link>
             </li>
-            <li className='nav-item'>
+            <li className="nav-item">
               <Link
-                to='/'
-                className='nav-links'
-                onClick={closeMobileMenu}
+                to="contact"
+                smooth={true}
+                duration={500}
+                className="nav-links"
+                onClick={() => {
+                  handleContactClick();
+                  closeMobileMenu();
+                }}
               >
                 CONTACT
               </Link>
@@ -49,7 +79,7 @@ function Navbar() {
         </div>
       </nav>
     </>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;
